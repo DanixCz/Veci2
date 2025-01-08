@@ -1,12 +1,14 @@
 <script>
     let {children} = $props();
+    import Link from './../lib/components/Link.svelte';
+    import Button from './../lib/components/Button.svelte';
 </script>
 
 <header>
     <nav>
-        <a href="/">HOME</a>
-        <a href="/login">login</a>
-        <a href="/register">register</a>
+        <Link href="/" color="white">Home</Link>
+        <Link href="/login" color="white">Login</Link>
+        <Link href="/registr" color="white">Sign in</Link>
     </nav>
 </header>
 
@@ -17,6 +19,7 @@
 <style>
 :global(body){
     margin: 0;
+    background-color: rgb(48, 48, 48);
 }
 
 main{
@@ -24,8 +27,9 @@ main{
 }
 
 nav{
-    background-color: blue;
+    background-color: rgb(255, 165, 44);
     padding: 24px;
+    gap: 50px;
 }
 a{
     color: white;

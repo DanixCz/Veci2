@@ -21,6 +21,11 @@
         border-radius: 10px;
         transition: ease .3s;
     }
+
+    .white{
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+    }
  
     .blue{
         background-color: blue;
@@ -30,6 +35,12 @@
     .green{
         background-color: green;
         color: white;
+    }
+
+    .white:hover{
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+        border: 1px solid rgb(0, 0, 0);
     }
  
     .blue:hover, .green:hover{
