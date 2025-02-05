@@ -25,11 +25,6 @@
 :global(body){
     margin: 0;
     background-color: rgb(48, 48, 48);
-    background-image: url(img/HD2_Background2.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
     color: white;
     font-family: "Chakra Petch", sans-serif;
     display: flex;
@@ -80,6 +75,7 @@ nav{
     transition: 0.5s ease;
     color: rgb(255, 255, 255);
     text-decoration: none;
+    font-size: 30px;
     font-weight: 600;
     border: 2px solid rgb(0, 0, 0, 0);
     text-shadow: 0px 0px 4px white;
@@ -89,6 +85,31 @@ nav{
     transition: 0.1s;
     border-bottom: 2px solid rgb(255, 233, 0);
     text-shadow: 0px 0px 4px rgb(255, 233, 0);
+}
+
+@media only screen and (max-width: 1030px) {
+   .nav{
+    font-size: 20px;
+   }
+   nav{
+    padding-right: 58px;
+   }
+
+   
+}
+
+@media only screen and (max-width: 528px) {
+   .nav{
+    font-size: 15px;
+   }
+   nav{
+    padding-right: 30px;
+    gap: 25px;
+   }
+   .img{
+    height: 50px;
+    }
+
 }
 
 </style>
