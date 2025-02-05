@@ -5,9 +5,9 @@
 </script>
 
 <header>
-    <div class="logo">
+    <a class="logo" href="https://www.arrowheadgamestudios.com/">
         <img class="img" src="/img/Helldivers_2_logo.webp" alt="">
-    </div>
+    </a>
     <nav>
         <a class="nav" href="/">Home</a>
         <a class="nav" href="/login">Login</a>
@@ -16,6 +16,7 @@
 </header>
 
 <main>
+    <img class="img2" src="img/HD2_Background2.jpg" alt="">
     {@render children()}
 </main>
 
@@ -39,23 +40,25 @@
     font-family: "Chakra Petch", sans-serif;
 }
 main{
-    padding: 21px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: 155px;
 }
 
 header{
     display: flex;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     width: 100%;
     background-color: rgb(0, 0, 0);
 }
 nav{
     display: flex;
     align-items: center;
-    margin-right: 28px;
     gap: 50px;
     font-size: 25px;
-    padding-right: 50px;
+    padding-right: 78px;
 }
 .logo{
     margin-top: 25px;
@@ -64,6 +67,14 @@ nav{
 }
 .img{
     height: 100px;
+}
+.img2{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    top: 0px;
 }
 .nav{
     transition: 0.5s ease;
