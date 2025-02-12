@@ -2,17 +2,26 @@
     let {children} = $props();
     import Link from './../lib/components/Link.svelte';
     import Button from './../lib/components/Button.svelte';
+
 </script>
 
 <header>
     <a class="logo" href="https://www.arrowheadgamestudios.com/">
         <img class="img1" src="/img/Helldivers_2_logo.webp" alt="">
     </a>
-    <nav>
-        <a class="nav" href="/">Home</a>
-        <a class="nav" href="/login">Login</a>
-        <a class="nav" href="/register">Sign in</a>
+
+    <nav class="nav1">
+        <a class="nav2" href="/">Home</a>
+        <a class="nav2" href="/login">Login</a>
+        <a class="nav2" href="/register">Sign in</a>
     </nav>
+    <div class="wrapper">
+        <div class="wrapper-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </div>
 </header>
 
 <main>
@@ -69,6 +78,7 @@ main{
     width: 100%;
     height: 100%;
     margin-top: 155px;
+    min-height: calc(100vh - 395px);
 }
 
 header{
@@ -85,6 +95,34 @@ nav{
     font-size: 25px;
     padding-right: 78px;
 }
+header .wrapper {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0 10px;
+  background: #fff;
+  z-index: 10;
+  position: relative;
+  display: none;
+}
+header .wrapper-hamburger {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: transform ease 1s;
+}
+header .wrapper-hamburger span {
+  transition: transform ease 1s;
+  transition: ease 1s;
+  border: 2px solid #000;
+}
 .logo{
     margin-top: 25px;
     margin-left: 35px;
@@ -93,7 +131,7 @@ nav{
 .img1{
     height: 100px;
 }
-.nav{
+.nav2{
     transition: 0.5s ease;
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -102,7 +140,7 @@ nav{
     border: 2px solid rgb(0, 0, 0, 0);
     text-shadow: 0px 0px 4px white;
 }
-.nav:hover{
+.nav2:hover{
     color: rgb(255, 233, 0);
     transition: 0.1s;
     border-bottom: 2px solid rgb(255, 233, 0);
@@ -119,7 +157,6 @@ nav{
 }
 
 footer{
-    margin-top: 100vh;
     background-color: black;
 }
 .icons{
@@ -159,29 +196,6 @@ path:hover{
     text-shadow: 0px 0px 4px rgb(255, 233, 0);
 }
 
-@media only screen and (max-width: 1030px) {
-   .nav{
-    font-size: 20px;
-   }
-   nav{
-    padding-right: 58px;
-   }
-
-   
-}
-
-@media only screen and (max-width: 528px) {
-   .nav{
-    font-size: 15px;
-   }
-   nav{
-    padding-right: 30px;
-    gap: 25px;
-   }
-   .img{
-    height: 50px;
-    }
-
-}
-
+@media only screen and (min-width: 768px) {
+ }
 </style>
